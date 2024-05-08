@@ -11,7 +11,7 @@ import SwiftUI
 struct furnitureAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartAppView()
         }
     }
 }
