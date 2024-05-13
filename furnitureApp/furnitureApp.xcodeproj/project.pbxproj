@@ -17,6 +17,19 @@
 		52F00BD22BE9BA0B00AD5F95 /* VerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BD12BE9BA0B00AD5F95 /* VerificationViewModel.swift */; };
 		52F00BD42BEABF4300AD5F95 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BD32BEABF4300AD5F95 /* VerificationView.swift */; };
 		52F00BD82BEB0B8100AD5F95 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BD72BEB0B8100AD5F95 /* DetailView.swift */; };
+		52F00BDA2BEC011C00AD5F95 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BD92BEC011C00AD5F95 /* MainTabBarView.swift */; };
+		52F00BDC2BEC0D2D00AD5F95 /* Font + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BDB2BEC0D2D00AD5F95 /* Font + Extension.swift */; };
+		52F00BDE2BEC27D500AD5F95 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BDD2BEC27D500AD5F95 /* ProfileView.swift */; };
+		52F00BE02BEC38E400AD5F95 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BDF2BEC38E400AD5F95 /* Product.swift */; };
+		52F00BE22BEC431C00AD5F95 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BE12BEC431C00AD5F95 /* HomeViewModel.swift */; };
+		52F00BE42BEC5C3000AD5F95 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BE32BEC5C3000AD5F95 /* HomeView.swift */; };
+		52F00C002BEDB21100AD5F95 /* SettingSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00BFF2BEDB21100AD5F95 /* SettingSearchViewModel.swift */; };
+		52F00C022BEDBA2E00AD5F95 /* SettingSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00C012BEDBA2E00AD5F95 /* SettingSearchView.swift */; };
+		52F00C062BEDBAC200AD5F95 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00C052BEDBAC200AD5F95 /* ProfileViewModel.swift */; };
+		52F00C082BF0E5A300AD5F95 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00C072BF0E5A300AD5F95 /* PaymentViewModel.swift */; };
+		52F00C0A2BF12CEE00AD5F95 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00C092BF12CEE00AD5F95 /* CardView.swift */; };
+		52F00C0C2BF13B3800AD5F95 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00C0B2BF13B3800AD5F95 /* PaymentView.swift */; };
+		52F00C102BF198A600AD5F95 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F00C0F2BF198A600AD5F95 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +44,19 @@
 		52F00BD12BE9BA0B00AD5F95 /* VerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewModel.swift; sourceTree = "<group>"; };
 		52F00BD32BEABF4300AD5F95 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		52F00BD72BEB0B8100AD5F95 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		52F00BD92BEC011C00AD5F95 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		52F00BDB2BEC0D2D00AD5F95 /* Font + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Extension.swift"; sourceTree = "<group>"; };
+		52F00BDD2BEC27D500AD5F95 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		52F00BDF2BEC38E400AD5F95 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		52F00BE12BEC431C00AD5F95 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		52F00BE32BEC5C3000AD5F95 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		52F00BFF2BEDB21100AD5F95 /* SettingSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSearchViewModel.swift; sourceTree = "<group>"; };
+		52F00C012BEDBA2E00AD5F95 /* SettingSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSearchView.swift; sourceTree = "<group>"; };
+		52F00C052BEDBAC200AD5F95 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		52F00C072BF0E5A300AD5F95 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		52F00C092BF12CEE00AD5F95 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		52F00C0B2BF13B3800AD5F95 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		52F00C0F2BF198A600AD5F95 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +91,17 @@
 			children = (
 				52F00BBD2BE9431700AD5F95 /* furnitureAppApp.swift */,
 				52F00BBF2BE9431700AD5F95 /* StartAppView.swift */,
+				52F00BD92BEC011C00AD5F95 /* MainTabBarView.swift */,
+				52F00C042BEDBA7800AD5F95 /* Home */,
+				52F00BDF2BEC38E400AD5F95 /* Product.swift */,
+				52F00C0E2BF13BDF00AD5F95 /* Profile */,
+				52F00C0D2BF13B5300AD5F95 /* Payment */,
 				52F00BD72BEB0B8100AD5F95 /* DetailView.swift */,
+				52F00C032BEDBA3F00AD5F95 /* SettingSearch */,
 				52F00BD52BEABF5A00AD5F95 /* VerificationModule */,
 				52F00BD62BEABF9F00AD5F95 /* LoginModule */,
 				52F00BCB2BE944D000AD5F95 /* Color + Extension.swift */,
+				52F00BDB2BEC0D2D00AD5F95 /* Font + Extension.swift */,
 				52F00BC12BE9431A00AD5F95 /* Assets.xcassets */,
 				52F00BC32BE9431A00AD5F95 /* Preview Content */,
 			);
@@ -95,10 +128,48 @@
 		52F00BD62BEABF9F00AD5F95 /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
+				52F00C0F2BF198A600AD5F95 /* CircleView.swift */,
 				52F00BCF2BE9A7B400AD5F95 /* LoginView.swift */,
 				52F00BCD2BE976AC00AD5F95 /* LoginViewModel.swift */,
 			);
 			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		52F00C032BEDBA3F00AD5F95 /* SettingSearch */ = {
+			isa = PBXGroup;
+			children = (
+				52F00C012BEDBA2E00AD5F95 /* SettingSearchView.swift */,
+				52F00BFF2BEDB21100AD5F95 /* SettingSearchViewModel.swift */,
+			);
+			path = SettingSearch;
+			sourceTree = "<group>";
+		};
+		52F00C042BEDBA7800AD5F95 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				52F00BE32BEC5C3000AD5F95 /* HomeView.swift */,
+				52F00BE12BEC431C00AD5F95 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		52F00C0D2BF13B5300AD5F95 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				52F00C0B2BF13B3800AD5F95 /* PaymentView.swift */,
+				52F00C072BF0E5A300AD5F95 /* PaymentViewModel.swift */,
+				52F00C092BF12CEE00AD5F95 /* CardView.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		52F00C0E2BF13BDF00AD5F95 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				52F00C052BEDBAC200AD5F95 /* ProfileViewModel.swift */,
+				52F00BDD2BEC27D500AD5F95 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,13 +242,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F00C002BEDB21100AD5F95 /* SettingSearchViewModel.swift in Sources */,
+				52F00C022BEDBA2E00AD5F95 /* SettingSearchView.swift in Sources */,
 				52F00BCE2BE976AC00AD5F95 /* LoginViewModel.swift in Sources */,
+				52F00BE42BEC5C3000AD5F95 /* HomeView.swift in Sources */,
+				52F00BDA2BEC011C00AD5F95 /* MainTabBarView.swift in Sources */,
 				52F00BD82BEB0B8100AD5F95 /* DetailView.swift in Sources */,
 				52F00BC02BE9431700AD5F95 /* StartAppView.swift in Sources */,
+				52F00C0A2BF12CEE00AD5F95 /* CardView.swift in Sources */,
 				52F00BBE2BE9431700AD5F95 /* furnitureAppApp.swift in Sources */,
+				52F00BE02BEC38E400AD5F95 /* Product.swift in Sources */,
 				52F00BD22BE9BA0B00AD5F95 /* VerificationViewModel.swift in Sources */,
 				52F00BD02BE9A7B400AD5F95 /* LoginView.swift in Sources */,
+				52F00C102BF198A600AD5F95 /* CircleView.swift in Sources */,
+				52F00BE22BEC431C00AD5F95 /* HomeViewModel.swift in Sources */,
+				52F00C0C2BF13B3800AD5F95 /* PaymentView.swift in Sources */,
 				52F00BCC2BE944D000AD5F95 /* Color + Extension.swift in Sources */,
+				52F00C082BF0E5A300AD5F95 /* PaymentViewModel.swift in Sources */,
+				52F00C062BEDBAC200AD5F95 /* ProfileViewModel.swift in Sources */,
+				52F00BDC2BEC0D2D00AD5F95 /* Font + Extension.swift in Sources */,
+				52F00BDE2BEC27D500AD5F95 /* ProfileView.swift in Sources */,
 				52F00BD42BEABF4300AD5F95 /* VerificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

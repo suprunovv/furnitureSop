@@ -16,6 +16,11 @@ struct StartAppView: View {
         static let signInText = "Sing in here"
     }
     
+    @State private var isShowText = false
+    @State private var opacityTitle = 0.0
+    @State private var opasityButton = 0.0
+    @State private var opasityBottom = 0.0
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -26,11 +31,42 @@ struct StartAppView: View {
                 VStack {
                     Spacer().frame(maxHeight: 60)
                     titleBody
+                        .opacity(opacityTitle)
+                        .onAppear {
+                            withAnimation(Animation.easeInOut(duration: 1.5)) {
+                                        self.opacityTitle = 1.0
+                                }
+                            }
                     Spacer().frame(maxHeight: 116)
                     startedButtonBody
+                        .opacity(opasityButton)
+                        .onAppear {
+                            withAnimation(Animation.easeInOut(duration: 1.5).delay(1)) {
+                                        self.opasityButton = 1.0
+                                }
+                            }
                     Spacer().frame(maxHeight: 75)
                     bottomBody
+                        .opacity(opasityBottom)
+                        .onAppear {
+                            withAnimation(Animation.easeInOut(duration: 2).delay(1.5)) {
+                                        self.opasityBottom = 1.0
+                                }
+                            }
                     Spacer()
+                }
+                if isShowText {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(.startBackgraund)
+                        Text("Разработано при поддержке Грибковских пацанов!")
+                            .frame(width: 150)
+                            .lineLimit(nil)
+                            .font(.verdanaBold(size: 14))
+                            .foregroundColor(.textColor)
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                    }.frame(width: 200, height: 200)
                 }
             }
         }
@@ -42,6 +78,12 @@ struct StartAppView: View {
                 .font(.system(size: 40, weight: .bold))
                 .foregroundColor(.white)
             titleImageBody
+                .opacity(opasityBottom)
+                .onAppear {
+                withAnimation(Animation.easeInOut(duration: 2).delay(1.5)) {
+                            self.opasityBottom = 1.0
+                    }
+                }
         }
     }
     
@@ -66,7 +108,7 @@ struct StartAppView: View {
     
     private var startedButtonBody: some View {
         VStack {
-            NavigationLink(destination: DetailView(),
+            NavigationLink(destination: MainTabBarView(),
              label: {
                 Text("")
                     .frame(maxWidth: 129, maxHeight: 24)
@@ -77,6 +119,16 @@ struct StartAppView: View {
             }).frame(maxWidth: 300, maxHeight: 55)
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 27))
+                .onLongPressGesture(minimumDuration: 1.5) {
+                    withAnimation {
+                        isShowText = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            withAnimation {
+                                isShowText = false
+                            }
+                        }
+                    }
+                }
         }
     }
     
@@ -85,7 +137,7 @@ struct StartAppView: View {
             Text(Constants.noAccountText)
                 .foregroundColor(.white)
                 .font(.system(size: 16, weight: .bold))
-            NavigationLink(destination: LoginView(),
+            NavigationLink(destination: CircleView(),
             label: {
                 Text(Constants.signInText)
                     .foregroundColor(.white)
@@ -116,11 +168,6 @@ struct TitleLoginView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        TitleLoginView()
-    }
-}
 
     
 

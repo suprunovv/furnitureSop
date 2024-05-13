@@ -28,9 +28,8 @@ struct VerificationView: View {
     var body: some View {
         VStack {
             ZStack {
-                LinearGradient(colors: [.startBackgraund, .endBackgraund],
-                               startPoint: .leading,
-                               endPoint: .trailing)
+                Rectangle()
+                    .modifier(NavigationModify(height: 118))
                 HStack(alignment: .center) {
                     Button {
                         presenttionMode.wrappedValue.dismiss()
@@ -45,13 +44,22 @@ struct VerificationView: View {
                         .foregroundColor(.white)
                     Spacer()
                 }.padding([.top], 20)
-            }.frame(height: 118)
-            Image("sms")
-            Text("Verification code")
-            codeBody
-            Spacer().frame(maxHeight: 20)
-            checkSmsBody
-            Spacer()
+            }.blur(radius: isShowAlert ? 5 : 0)
+            ZStack {
+                VStack {
+                    Image("sms")
+                    Text("Verification code")
+                    codeBody
+                    Spacer().frame(maxHeight: 20)
+                    checkSmsBody
+                    Spacer()
+                }.blur(radius: isShowAlert ? 5 : 0)
+                if isShowAlert {
+                  alertView
+                        .transition(.slide)
+                        .zIndex(1)
+                }
+            }
         }.ignoresSafeArea()
     }
     
@@ -93,6 +101,46 @@ struct VerificationView: View {
         }
     }
     
+    var alertView: some View {
+        VStack(spacing: 20) {
+            Text("НЕ ЛЕЗЬ! ОНА ТЕБЯ СОЖРЕТ!!!")
+                .foregroundStyle(.white)
+            Image("medved")
+                .resizable()
+                .frame(width: 150, height: 150)
+                .foregroundStyle(.white)
+                .clipShape(Circle())
+            Text(viewModel.currentCode.joined(separator: ""))
+                .foregroundColor(.white)
+                .font(.verdanaBold(size: 24))
+            HStack(spacing: 20) {
+                Button("Я упёртый") {
+                    viewModel.updateTexts()
+                    isShowAlert.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        currentText = nil
+                    }
+                }.padding()
+                .frame(width: 130)
+                .foregroundStyle(.white)
+                    .background(Color.red)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                Button("Понял") {
+                    withAnimation {
+                        isShowAlert.toggle()
+                    }
+                }.padding()
+                .frame(width: 130)
+                .foregroundStyle(.white)
+                    .background(Color.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+        }.padding(35)
+            .background(RoundedRectangle(cornerRadius: 20).fill(Color.brown))
+            .padding(.top, 100)
+            .shadow(radius: 15)
+    }
+    
     private var bottomBody: some View {
         VStack(spacing: 20) {
             Button {
@@ -119,18 +167,12 @@ struct VerificationView: View {
                 Spacer().frame(height: 7)
                 Button {
                     viewModel.createCode()
-                    isShowAlert.toggle()
+                    withAnimation {
+                        isShowAlert.toggle()
+                    }
                 } label: {
                     Text(Constants.sendSms)
                         .foregroundColor(.textColor)
-                }.alert(isPresented: $isShowAlert) {
-                    Alert(title: Text(Constants.alertTitle),
-                          message: Text(viewModel.currentCode.joined()), primaryButton: .cancel(), secondaryButton: .default(Text("Ok"), action: {
-                        viewModel.updateTexts()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            currentText = nil
-                        }
-                    }))
                 }.font(.system(size: 20, weight: .bold))
                 Divider().frame(maxWidth: 160)
             }
@@ -148,3 +190,4 @@ struct VerificationView: View {
     }
     
 }
+

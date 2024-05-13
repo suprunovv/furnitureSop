@@ -2,7 +2,13 @@ import SwiftUI
 
 struct DetailView: View {
     @State private var editorText = ""
+    var product: Product
+    @State private var scale: CGFloat = 2
     @Environment(\.presentationMode) var presentationMode
+    
+    init(product: Product) {
+        self.product = product
+    }
     
     var body: some View {
         VStack {
@@ -11,10 +17,20 @@ struct DetailView: View {
         }.navigationBarBackButtonHidden(true)
     }
     
+    private var magnificationView: some Gesture {
+        MagnificationGesture()
+            .onChanged { value in
+                scale = value
+            }
+            .onEnded { _ in
+                scale = 2
+            }
+    }
+    
     private var topBody: some View {
         VStack {
             HStack {
-                Text("Sofa Elda 900")
+                Text(product.name)
                     .font(.system(size: 20, weight: .bold))
                     .foregroundColor(.textColor)
                 Spacer()
@@ -24,10 +40,13 @@ struct DetailView: View {
                         .foregroundColor(.textColor)
                 }
             }.padding()
-            Image("elida")
+            Image(product.imageName)
+                .frame(width: 300, height: 177)
+                .scaleEffect(scale)
+                .gesture(magnificationView)
             HStack {
                 Spacer()
-                Text("Price: 999$")
+                Text("Price: \(product.priceOnSale)$")
                     .frame(width: 200, height: 44)
                     .font(.system(size: 20, weight: .bold))
                     .background(Color.startBackgraund)
